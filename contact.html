@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact · Dr. Salasiah Abbas</title>
+  <meta name="description" content="Get in touch with Dr. Salasiah Abbas about speaking engagements, panels, executive sessions, media and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=5">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <div class="nav">
+      <a href="index.html" class="wordmark" aria-label="Dr. Salasiah Abbas"><span class="wordmark-script">Salasiah</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      <!-- Speaking and Contact are live; the other items become links once their pages exist -->
+      <nav class="nav-links">
+        <a class="nav-item">Home</a>
+        <a class="nav-item">The Briefing</a>
+        <a href="index.html" class="nav-item">Speaking</a>
+        <a class="nav-item">Advisory <svg class="chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></a>
+        <a class="nav-item">About</a>
+        <a href="contact.html" class="nav-item active" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Intro + photo -->
+    <section class="contact-hero">
+      <div class="container contact-hero-grid">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h1>Let's start a conversation.</h1>
+          <p class="contact-lead">Every message is read personally. Share a few details about what you have in mind, and Dr. Salasiah's team will be in touch.</p>
+        </div>
+        <img class="contact-photo" src="images/salasiah-library.jpg" alt="Dr. Salasiah Abbas">
+      </div>
+    </section>
+
+    <div class="container"><hr class="contact-rule"></div>
+
+    <!-- Form + side info -->
+    <section class="contact-main">
+      <div class="container contact-grid">
+
+        <!-- Contact form: handled by Netlify Forms (submissions appear under Forms in the Netlify dashboard) -->
+        <form id="contact-form" class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hidden-field"><label>Leave this empty: <input name="bot-field"></label></p>
+
+          <label class="field">Your name
+            <input type="text" name="name" placeholder="First and last" required autocomplete="name">
+          </label>
+          <label class="field">Email
+            <input type="email" name="email" placeholder="you@company.com" required autocomplete="email">
+          </label>
+
+          <fieldset class="field topics">
+            <legend>What's this about</legend>
+            <div class="topic-grid">
+              <label class="topic"><input type="radio" name="topic" value="Speaking" checked><span><strong>Speaking</strong><small>I'd like to invite Dr. Salasiah to speak.</small></span></label>
+              <label class="topic"><input type="radio" name="topic" value="Panel or fireside"><span><strong>Panel or fireside</strong><small>We're planning a panel or fireside conversation.</small></span></label>
+              <label class="topic"><input type="radio" name="topic" value="Executive session"><span><strong>Executive session</strong><small>We'd like a tailored session for our leaders.</small></span></label>
+              <label class="topic"><input type="radio" name="topic" value="University engagement"><span><strong>University engagement</strong><small>We're inviting her to a campus programme.</small></span></label>
+              <label class="topic"><input type="radio" name="topic" value="Press / podcast"><span><strong>Press / podcast</strong><small>I'd like to interview Dr. Salasiah.</small></span></label>
+              <label class="topic"><input type="radio" name="topic" value="Something else"><span><strong>Something else</strong><small>I just want to say hello.</small></span></label>
+            </div>
+          </fieldset>
+
+          <label class="field">Tell me a little
+            <textarea name="message" rows="6" placeholder="Your event, audience, preferred date and the key messages you'd like your audience to take away." required></textarea>
+          </label>
+
+          <button type="submit" class="btn btn-pill">Send message &rarr;</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+          <p class="contact-alt">Or simply email <a href="mailto:drsalasiah@sovaintell.com">drsalasiah@sovaintell.com</a>.</p>
+        </form>
+
+        <aside class="contact-side">
+          <div class="side-block">
+            <p class="eyebrow">Elsewhere</p>
+            <ul class="side-links">
+              <li><a href="https://www.linkedin.com/in/dr-salasiah-abbas-5362b3144" target="_blank" rel="noopener">LinkedIn <span>· Dr. Salasiah Abbas</span></a></li>
+              <li><a href="https://www.instagram.com/drsalasiah" target="_blank" rel="noopener">Instagram <span>· @drsalasiah</span></a></li>
+              <li><a href="https://www.tiktok.com/@dr_salasiah" target="_blank" rel="noopener">TikTok <span>· @dr_salasiah</span></a></li>
+              <li><a href="https://www.sovaintell.com" target="_blank" rel="noopener">SOVA Intelligence <span>· AI transformation</span></a></li>
+            </ul>
+          </div>
+          <div class="side-block">
+            <p class="eyebrow">For press</p>
+            <p>A two-page speaker kit, professional biography, photographs and signature keynote topics are available upon request. Email <a href="mailto:drsalasiah@sovaintell.com">drsalasiah@sovaintell.com</a>.</p>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <p class="footer-line">Dr. Salasiah Abbas</p>
+        <div class="footer-cols">
+          <div>
+            <h4>Affiliation</h4>
+            <a href="https://www.sovaintell.com" target="_blank" rel="noopener">SOVA Intelligence</a>
+          </div>
+          <div>
+            <h4>Social</h4>
+            <a href="https://www.linkedin.com/in/dr-salasiah-abbas-5362b3144" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.tiktok.com/@dr_salasiah" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://www.instagram.com/drsalasiah" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">&copy; <span id="year"></span> Dr. Salasiah Abbas. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js?v=5"></script>
+</body>
+</html>

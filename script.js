@@ -11,12 +11,12 @@ links.querySelectorAll("a").forEach((a) =>
 
 // Contact form: submit to Netlify Forms without leaving the page
 const form = document.getElementById("contact-form");
-const status = form.querySelector(".form-status");
-form.addEventListener("submit", async (e) => {
+const formStatus = form && form.querySelector(".form-status");
+if (form) form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const button = form.querySelector("button");
   button.disabled = true;
-  status.textContent = "Sending…";
+  formStatus.textContent = "Sending…";
   try {
     const res = await fetch("/", {
       method: "POST",
@@ -25,9 +25,9 @@ form.addEventListener("submit", async (e) => {
     });
     if (!res.ok) throw new Error(res.status);
     form.reset();
-    status.textContent = "Thank you. Your enquiry has been sent, and Dr. Salasiah's team will be in touch.";
+    formStatus.textContent = "Thank you. Your enquiry has been sent, and Dr. Salasiah's team will be in touch.";
   } catch {
-    status.textContent = "Sorry, the form could not be sent. Please email drsalasiah@sovaintell.com instead.";
+    formStatus.textContent = "Sorry, the form could not be sent. Please email drsalasiah@sovaintell.com instead.";
   } finally {
     button.disabled = false;
   }

@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
 
@@ -17,14 +17,14 @@
     <div class="nav">
       <a href="#" class="wordmark" aria-label="Dr. Salasiah Abbas"><span class="wordmark-script">Salasiah</span></a>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
-      <!-- Only Speaking is live; the other items become links once their pages exist -->
+      <!-- Speaking and Contact are live; the other items become links once their pages exist -->
       <nav class="nav-links">
         <a class="nav-item">Home</a>
         <a class="nav-item">The Briefing</a>
         <a href="#" class="nav-item active" aria-current="page">Speaking</a>
         <a class="nav-item">Advisory <svg class="chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></a>
         <a class="nav-item">About</a>
-        <a class="nav-item">Contact</a>
+        <a href="contact.html" class="nav-item">Contact</a>
       </nav>
     </div>
   </header>
@@ -234,28 +234,11 @@
           <p>Share a few details about your event, audience, preferred date and the key messages you would like your audience to take away. Each speaking engagement can be tailored to deliver fresh perspectives, engaging conversations and meaningful insights.</p>
           <div class="btn-row">
             <a href="mailto:drsalasiah@sovaintell.com" class="btn">drsalasiah@sovaintell.com &rarr;</a>
-            <a href="#contact-form" class="btn btn-outline">Or use the contact form &rarr;</a>
+            <a href="contact.html" class="btn btn-outline">Or use the contact form &rarr;</a>
           </div>
           <p class="booking-note">A two-page speaker kit, professional biography, photographs and signature keynote topics are available upon request.</p>
         </div>
         <img class="booking-photo" src="images/salasiah-podium.jpg" alt="Dr. Salasiah Abbas speaking at a podium">
-      </div>
-
-      <!-- Contact form: handled by Netlify Forms (submissions appear under Forms in the Netlify dashboard) -->
-      <div class="container">
-        <form id="contact-form" class="contact-form" name="speaking-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="speaking-enquiry">
-          <p class="hidden-field"><label>Leave this empty: <input name="bot-field"></label></p>
-          <div class="form-grid">
-            <label>Name<input type="text" name="name" required autocomplete="name"></label>
-            <label>Email<input type="email" name="email" required autocomplete="email"></label>
-            <label>Organisation<input type="text" name="organisation" autocomplete="organization"></label>
-            <label>Preferred date<input type="date" name="date"></label>
-            <label class="full">Event, audience &amp; key messages<textarea name="message" rows="5" required></textarea></label>
-          </div>
-          <button type="submit" class="btn">Send enquiry &rarr;</button>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </form>
       </div>
     </section>
   </main>
@@ -282,6 +265,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>
