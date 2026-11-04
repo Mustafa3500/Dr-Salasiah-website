@@ -239,7 +239,7 @@ dt { color: var(--muted); padding-top: .25rem; }
 .feature h2 { margin-bottom: 1rem; }
 .feature p:not(.author-role) { color: var(--muted); margin-bottom: .9rem; }
 .feature-lead { font-family: var(--serif); font-style: italic; font-size: 1.2rem; }
-.feature-photo { aspect-ratio: 4 / 3; border-radius: var(--radius); }
+.feature-photo { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); }
 .photo-placeholder { background: repeating-linear-gradient(45deg, #ece6dc, #ece6dc 12px, #f2ede5 12px, #f2ede5 24px); display: grid; place-items: center; color: #a39b8e; font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; }
 .questions { display: grid; gap: 1.1rem; margin-top: 1.4rem; }
 .questions dt { font-family: var(--serif); font-size: 1.35rem; font-weight: 500; letter-spacing: normal; text-transform: none; color: var(--ink); padding: 0; }
