@@ -5,9 +5,38 @@ toggle.addEventListener("click", () => {
   const open = links.classList.toggle("open");
   toggle.setAttribute("aria-expanded", open);
 });
-links.querySelectorAll("a").forEach((a) =>
+links.querySelectorAll("a:not(.dropdown-toggle)").forEach((a) =>
   a.addEventListener("click", () => links.classList.remove("open"))
 );
+
+// Advisory dropdown: hover opens it on desktop (a click goes to the Advisory page);
+// on phones a tap opens the sub-menu instead
+const dropdown = document.querySelector(".nav-dropdown");
+if (dropdown) {
+  const ddToggle = dropdown.querySelector(".dropdown-toggle");
+  const isPhoneMenu = () => getComputedStyle(toggle).display !== "none";
+  const setOpen = (open) => {
+    dropdown.classList.toggle("open", open);
+    ddToggle.setAttribute("aria-expanded", open);
+  };
+  ddToggle.addEventListener("click", (e) => {
+    if (!isPhoneMenu()) return;
+    e.preventDefault();
+    setOpen(!dropdown.classList.contains("open"));
+  });
+  dropdown.querySelectorAll(".dropdown-item").forEach((item) =>
+    item.addEventListener("click", () => {
+      setOpen(false);
+      links.classList.remove("open");
+    })
+  );
+  document.addEventListener("click", (e) => {
+    if (!dropdown.contains(e.target)) setOpen(false);
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") setOpen(false);
+  });
+}
 
 // Contact form: submit to Netlify Forms without leaving the page
 const form = document.getElementById("contact-form");
