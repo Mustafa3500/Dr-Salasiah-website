@@ -7,20 +7,24 @@
   <meta name="description" content="Keynotes, firesides and panels on turning AI, technology integration and proprietary data into business value and sustainable growth.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
 
   <!-- 1. Navigation -->
   <header class="site-header">
-    <div class="container nav">
-      <a href="#" class="wordmark">Dr. Salasiah Abbas</a>
+    <div class="nav">
+      <a href="#" class="wordmark" aria-label="Dr. Salasiah Abbas"><span class="wordmark-script">Salasiah</span></a>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      <!-- Only Speaking is live; the other items become links once their pages exist -->
       <nav class="nav-links">
-        <a href="#" class="active">Speaking &amp; Media</a>
-        <a href="#talks">Signature Talks</a>
-        <a href="#booking" class="btn btn-small">Book Dr. Salasiah</a>
+        <a class="nav-item">Home</a>
+        <a class="nav-item">The Briefing</a>
+        <a href="#" class="nav-item active" aria-current="page">Speaking</a>
+        <a class="nav-item">Advisory <svg class="chevron" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></a>
+        <a class="nav-item">About</a>
+        <a class="nav-item">Contact</a>
       </nav>
     </div>
   </header>
@@ -278,6 +282,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
