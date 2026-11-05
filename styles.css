@@ -58,7 +58,7 @@ h3 { font-size: 1.5rem; }
 .site-header { position: sticky; top: 0; z-index: 10; background: #fff; border-top: 1px solid #e5e7eb; }
 .nav { width: min(1240px, 90%); height: 96px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
 .wordmark { display: flex; align-items: baseline; color: #111; line-height: 1; }
-.wordmark-script { font-family: "Mrs Saint Delafield", cursive; font-size: 2.6rem; font-weight: 400; transform: rotate(-6deg); margin-right: .15rem; }
+.wordmark-script { font-family: "Whisper", cursive; font-size: 2.6rem; font-weight: 400; transform: rotate(-4deg); margin-right: .15rem; }
 .nav-links { display: flex; align-items: center; gap: 2.8rem; }
 .nav-item { font: inherit; font-family: var(--sans); font-size: 1.05rem; font-weight: 400; color: #5b6472; background: none; border: 0; padding: 0; cursor: pointer; display: inline-flex; align-items: center; gap: .45rem; transition: color .2s; }
 .nav-item:hover, .nav-item.active { color: #111827; }
