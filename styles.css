@@ -198,7 +198,7 @@ dt { color: var(--muted); padding-top: .25rem; }
 
 /* Advisory page */
 .inline-link { color: var(--ink); border-bottom: 1px solid var(--accent); }
-.advisory-hero-photo { width: 100%; max-width: 480px; justify-self: end; aspect-ratio: 4 / 3; border-radius: var(--radius); }
+.advisory-hero-photo { width: 100%; max-width: 480px; justify-self: end; aspect-ratio: 1 / 1; object-fit: cover; border-radius: var(--radius); }
 .page-index { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .services-section { padding: 6rem 0; }
 .services { border: 1px solid var(--line); background: #fff; }
@@ -206,6 +206,8 @@ dt { color: var(--muted); padding-top: .25rem; }
 .service:last-child { border-bottom: 0; }
 .service-reverse .service-photo { order: 2; }
 .service-photo { min-height: 380px; height: 100%; }
+img.service-photo { width: 100%; object-fit: cover; display: block; }
+@media (min-width: 861px) { img.service-photo { height: 0; min-height: 100%; } .service { min-height: 380px; } } /* photo follows the text height instead of stretching the row */
 .service-body { padding: 3.2rem 3rem; display: flex; flex-direction: column; justify-content: center; }
 .service-for { font-size: .65rem; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
 .service h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 1.1rem; }
