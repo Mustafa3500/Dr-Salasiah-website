@@ -223,6 +223,39 @@ img.service-photo { width: 100%; object-fit: cover; display: block; }
 .sits-tagline { font-family: var(--serif); font-style: italic; font-size: 1.5rem; color: var(--ink); margin-top: .5rem; }
 .sits-body .btn { justify-self: start; margin-top: .6rem; }
 
+/* 1:1 Executive Consulting page */
+.consult-hero { padding: 6rem 0 4rem; }
+.consult-hero h1 { max-width: 46rem; }
+.consult-hero .contact-lead { max-width: 40rem; }
+.consult-hero .btn-row { align-items: center; }
+.consult-sub { font-size: .85rem; color: var(--muted); border-bottom: 1px solid var(--line); }
+.consult-sub:hover { color: var(--ink); }
+.consult-facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 3rem; margin-top: 2.5rem; }
+.consult-facts > div { display: grid; grid-template-columns: 6rem 1fr; gap: 1rem; padding: .9rem 0; border-top: 1px solid var(--line); }
+.consult-facts dd { font-size: .92rem; }
+.consult-work { padding: 6rem 0; }
+.work-list { margin-top: 1rem; border-top: 1px solid var(--line); }
+.work-item { display: grid; grid-template-columns: .9fr 1.1fr; gap: 4rem; padding: 3rem 0; border-bottom: 1px solid var(--line); }
+.work-num { display: block; font-size: .75rem; color: var(--muted); letter-spacing: .1em; margin-bottom: .6rem; }
+.work-item h3 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); }
+.work-item p { color: #4a4f59; max-width: 36rem; }
+.consult-how { background: var(--alt); padding: 6rem 0; }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-top: 1rem; }
+.step-num { display: block; font-family: var(--serif); font-size: 2.4rem; color: var(--accent); line-height: 1; margin-bottom: 1rem; }
+.step h3 { font-size: 1.4rem; margin-bottom: .6rem; }
+.step p { font-size: .92rem; color: #4a4f59; }
+.steps-note { margin-top: 3rem; font-size: .9rem; color: var(--muted); }
+.consult-cta { background: var(--ink); color: #f1ece4; padding: 7rem 0; }
+.consult-cta h2 { max-width: 40rem; }
+.cta-body { display: grid; gap: 1rem; max-width: 38rem; color: #b8bcc5; }
+.cta-sign { margin-top: 2rem; display: grid; }
+.cta-sign span { font-size: .8rem; color: #b8bcc5; }
+.consult-cta .btn-row { align-items: center; gap: 1.6rem; }
+.btn-light { background: #fff; color: var(--ink); border-color: #fff; }
+.btn-light:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.cta-link { font-size: .85rem; color: #f1ece4; border-bottom: 1px solid var(--accent); }
+.cta-link:hover { color: var(--accent); }
+
 /* Briefing page */
 .brief-intro { margin-top: 1.8rem; max-width: 32rem; font-size: .95rem; color: var(--muted); display: grid; gap: .9rem; }
 .brief-intro em { color: var(--ink); }
@@ -292,6 +325,12 @@ img.service-photo { width: 100%; object-fit: cover; display: block; }
   .card-grid { grid-template-columns: 1fr; }
     .contact-hero-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
   .rail { grid-template-columns: 1fr; gap: 1.5rem; }
+  .work-item { grid-template-columns: 1fr; gap: 1rem; padding: 2.2rem 0; }
+  .steps { grid-template-columns: 1fr; gap: 2rem; }
+  .consult-facts { grid-template-columns: 1fr; }
+  .consult-hero { padding: 3.5rem 0 3rem; }
+  .consult-work, .consult-how { padding: 4rem 0; }
+  .consult-cta { padding: 4.5rem 0; }
   .service { grid-template-columns: 1fr; }
   .service-reverse .service-photo { order: 0; }
   .service-photo { min-height: 240px; }
