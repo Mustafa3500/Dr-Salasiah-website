@@ -256,6 +256,40 @@ img.service-photo { width: 100%; object-fit: cover; display: block; }
 .cta-link { font-size: .85rem; color: #f1ece4; border-bottom: 1px solid var(--accent); }
 .cta-link:hover { color: var(--accent); }
 
+/* About page */
+.about-sign { font-family: "Mrs Saint Delafield", cursive; font-size: 2.4rem; line-height: 1; color: var(--ink); margin-top: 2rem; }
+.about-glance-sub { margin-top: 1.2rem; color: #4a4f59; max-width: 46rem; }
+.about-facts > div { grid-template-columns: 8.5rem 1fr; }
+.story { max-width: 40rem; display: grid; gap: 1.1rem; color: #4a4f59; }
+.story h2 { color: var(--ink); margin: 2.5rem 0 .4rem; }
+.story h2:first-child { margin-top: 0; }
+.story-quote { font-family: var(--serif); font-style: italic; font-size: 1.45rem; line-height: 1.45; color: var(--ink); border-left: 2px solid var(--accent); padding: .3rem 0 .3rem 1.4rem; margin: .8rem 0; }
+.story-photo-wrap { padding: 4rem 0; }
+.story-photo { width: 100%; max-width: 760px; margin-left: auto; aspect-ratio: 16 / 9; border-radius: var(--radius); }
+.themes { display: grid; gap: 1rem; margin: .4rem 0; padding-left: 1.2rem; border-left: 1px solid var(--line); }
+.themes dt { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; letter-spacing: normal; text-transform: none; color: var(--ink); padding: 0; }
+.themes dd { font-size: .92rem; }
+.story-close { margin-top: 2.2rem; text-align: center; }
+.story-tagline { font-family: var(--serif); font-style: italic; font-size: 1.3rem; color: var(--muted); }
+.signature { font-family: "Mrs Saint Delafield", cursive; font-size: 3rem; line-height: 1.2; color: var(--ink); }
+.signature-name { font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); }
+.quick { border-top: 1px solid var(--line); }
+.quick-title { font-size: clamp(1.8rem, 3vw, 2.3rem); margin: 0; }
+.quick .rail { grid-template-columns: 20rem 1fr; }
+.qa details { border-bottom: 1px solid var(--line); padding: 1.3rem 0; }
+.qa details:first-child { border-top: 1px solid var(--line); }
+.qa summary { list-style: none; cursor: pointer; font-family: var(--serif); font-size: 1.35rem; font-weight: 500; display: flex; justify-content: space-between; gap: 1rem; }
+.qa summary::-webkit-details-marker { display: none; }
+.qa summary::after { content: "+"; font-family: var(--sans); font-weight: 300; color: var(--accent); font-size: 1.4rem; line-height: 1; transition: transform .3s; }
+.qa details[open] summary::after { transform: rotate(45deg); }
+.qa details p { color: #4a4f59; margin-top: .8rem; max-width: 44rem; }
+.next { background: var(--alt); padding: 5rem 0; }
+.next-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+.next-card h3 { font-size: 1.6rem; margin-bottom: .4rem; }
+.next-card > p:not(.eyebrow) { font-size: .9rem; color: var(--muted); }
+.next-card .service-link { display: inline-block; margin-top: 1rem; }
+.next-links { display: flex; gap: 1.5rem; }
+
 /* Briefing page */
 .brief-intro { margin-top: 1.8rem; max-width: 32rem; font-size: .95rem; color: var(--muted); display: grid; gap: .9rem; }
 .brief-intro em { color: var(--ink); }
@@ -325,6 +359,10 @@ img.service-photo { width: 100%; object-fit: cover; display: block; }
   .card-grid { grid-template-columns: 1fr; }
     .contact-hero-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
   .rail { grid-template-columns: 1fr; gap: 1.5rem; }
+  .quick .rail { grid-template-columns: 1fr; }
+  .next-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .story-photo-wrap { padding: 2.5rem 0; }
+  .about-facts > div { grid-template-columns: 1fr; gap: .2rem; }
   .work-item { grid-template-columns: 1fr; gap: 1rem; padding: 2.2rem 0; }
   .steps { grid-template-columns: 1fr; gap: 2rem; }
   .consult-facts { grid-template-columns: 1fr; }
