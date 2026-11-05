@@ -271,7 +271,7 @@ img.service-photo { width: 100%; object-fit: cover; display: block; }
 .story h2:first-child { margin-top: 0; }
 .story-quote { font-family: var(--serif); font-style: italic; font-size: 1.45rem; line-height: 1.45; color: var(--ink); border-left: 2px solid var(--accent); padding: .3rem 0 .3rem 1.4rem; margin: .8rem 0; }
 .story-photo-wrap { padding: 4rem 0; }
-.story-photo { width: 100%; max-width: 760px; margin-left: auto; aspect-ratio: 16 / 9; border-radius: var(--radius); }
+.story-photo { display: block; width: 100%; max-width: 760px; margin-left: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius); }
 .themes { display: grid; gap: 1rem; margin: .4rem 0; padding-left: 1.2rem; border-left: 1px solid var(--line); }
 .themes dt { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; letter-spacing: normal; text-transform: none; color: var(--ink); padding: 0; }
 .themes dd { font-size: .92rem; }
