@@ -145,8 +145,16 @@ dt { color: var(--muted); padding-top: .25rem; }
 .card p:last-child { color: #4a4f59; }
 
 /* Press & media */
-#press { padding: 5rem 0; }
-#press .eyebrow { margin-bottom: 0; }
+/* Press list */
+.press-enquiries { font-size: .9rem; color: var(--muted); margin: -1.8rem 0 3rem; max-width: 44rem; }
+.press-list { border-top: 1px solid var(--line); }
+.press-item { display: grid; grid-template-columns: 11rem 1fr auto; gap: .4rem 2.5rem; align-items: baseline; padding: 1.8rem 0; border-bottom: 1px solid var(--line); }
+.press-type { grid-row: span 2; font-size: .65rem; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--accent); }
+.press-item h3 { font-size: clamp(1.3rem, 2.2vw, 1.6rem); line-height: 1.25; }
+.press-meta { grid-column: 2; font-size: .85rem; color: var(--muted); }
+.press-link { grid-column: 3; grid-row: 1 / span 2; align-self: center; white-space: nowrap; font-size: .85rem; color: var(--ink); border-bottom: 1px solid var(--accent); transition: color .2s; }
+.press-link:hover { color: var(--accent-dark); }
+
 
 /* Booking */
 .booking { background: var(--ink); color: #f1ece4; }
@@ -181,6 +189,7 @@ dt { color: var(--muted); padding-top: .25rem; }
 .topic input { margin-top: .3rem; accent-color: var(--ink); }
 .topic strong { display: block; font-size: .9rem; font-weight: 400; color: var(--ink); }
 .topic small { display: block; font-size: .78rem; color: var(--muted); line-height: 1.5; margin-top: .2rem; }
+.topic:last-child:nth-child(odd) { grid-column: 1 / -1; }
 .topic:has(input:checked) { border-color: var(--ink); background: var(--alt); }
 .btn-pill { border-radius: 999px; text-transform: none; letter-spacing: normal; font-size: .9rem; padding: .9rem 1.6rem; }
 .form-status { margin-top: 1rem; font-size: .9rem; color: var(--muted); min-height: 1.5em; }
@@ -343,5 +352,8 @@ dt { color: var(--muted); padding-top: .25rem; }
   .contact-lead { font-size: 1.2rem; }
   .card { padding: 1.6rem; }
   .card h3 { font-size: 1.35rem; }
-  #press { padding: 3.5rem 0; }
+  .press-item { grid-template-columns: 1fr; gap: .5rem; }
+  .press-type, .press-meta, .press-link { grid-column: auto; grid-row: auto; }
+  .press-link { justify-self: start; margin-top: .4rem; }
+  .press-enquiries { margin-top: -1rem; }
 }
