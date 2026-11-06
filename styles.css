@@ -61,7 +61,7 @@ h3 { font-size: 1.5rem; }
 .split-reverse { margin-bottom: 0; }
 /* Home sections with a side photo; on phones the photo moves to the end of the section */
 .photo-sec .split { margin-bottom: 3rem; }
-.full-photo, .advisory-hero-photo.full-photo { aspect-ratio: auto; height: auto; max-width: 380px; justify-self: end; } /* whole photo, no cropping */
+.full-photo, .advisory-hero-photo.full-photo, .feature-photo.full-photo { aspect-ratio: auto; height: auto; max-width: 380px; justify-self: end; } /* whole photo, no cropping */
 .photo-sec .sec-photo { aspect-ratio: auto; height: auto; max-width: 380px; justify-self: end; } /* show the whole photo, no cropping */
 
 /* Header */
