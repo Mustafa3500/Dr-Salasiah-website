@@ -59,6 +59,10 @@ h3 { font-size: 1.5rem; }
 .split .section-intro { margin-bottom: 0; }
 .split-photo { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); }
 .split-reverse { margin-bottom: 0; }
+/* Home sections with a side photo; on phones the photo moves to the end of the section */
+.photo-sec .split { margin-bottom: 3rem; }
+.full-photo, .advisory-hero-photo.full-photo { aspect-ratio: auto; height: auto; max-width: 380px; justify-self: end; } /* whole photo, no cropping */
+.photo-sec .sec-photo { aspect-ratio: auto; height: auto; max-width: 380px; justify-self: end; } /* show the whole photo, no cropping */
 
 /* Header */
 .site-header { position: sticky; top: 0; z-index: 10; background: var(--surface); border-top: 1px solid var(--line); }
@@ -344,8 +348,7 @@ img.service-photo { width: 100%; object-fit: cover; display: block; }
 .connect-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 4rem; align-items: center; }
 .connect-card { background: var(--surface); border: 1px solid var(--line); padding: 2.4rem; }
 .connect-card .signature { font-size: 2.6rem; }
-.connect-name { font-family: var(--serif); font-size: 1.4rem; margin-top: .4rem; }
-.connect-role { font-size: .85rem; color: var(--muted); margin-top: .3rem; }
+.connect-role { font-size: .85rem; color: var(--muted); margin-top: .8rem; }
 .connect-dl { display: grid; gap: .6rem; margin-top: 1.6rem; padding-top: 1.4rem; border-top: 1px solid var(--line); }
 .connect-dl > div { display: grid; grid-template-columns: 6rem 1fr; }
 .connect-dl dd { font-size: .9rem; }
@@ -471,6 +474,11 @@ img.service-photo { width: 100%; object-fit: cover; display: block; }
   .jump-bar { top: 0; }
   .split { grid-template-columns: 1fr; gap: 2.5rem; margin-bottom: 3rem; }
   .split-reverse .split-photo { order: 2; }
+  .photo-sec { display: flex; flex-direction: column; }
+  .photo-sec .split { display: contents; }
+  .photo-sec .split > div { margin-bottom: 2rem; }
+  .full-photo { max-width: 100%; justify-self: auto; }
+  .photo-sec .sec-photo { order: 5; margin-top: 3rem; max-width: 100%; justify-self: auto; }
 }
 @media (max-width: 560px) {
   h1 { font-size: 2.3rem; }
