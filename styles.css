@@ -280,6 +280,9 @@ img.service-photo { width: 100%; object-fit: cover; display: block; }
 .themes dt { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; letter-spacing: normal; text-transform: none; color: var(--ink); padding: 0; }
 .themes dd { font-size: .92rem; }
 .story-close { margin-top: 2.2rem; text-align: center; }
+.story-end { padding-top: 3.5rem; }
+.story-end-photo { display: block; width: 100%; max-width: 380px; height: auto; margin: 0 auto; border-radius: var(--radius); } /* whole photo, centred under the signature */
+.wide-photo { aspect-ratio: auto; height: auto; } /* landscape photo shown whole */
 .story-tagline { font-family: var(--serif); font-style: italic; font-size: 1.3rem; color: var(--muted); }
 .signature { font-family: "Whisper", cursive; font-size: 3rem; line-height: 1.2; color: var(--ink); }
 .signature-name { font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); }
