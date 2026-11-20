@@ -62,5 +62,39 @@ if (form) form.addEventListener("submit", async (e) => {
   }
 });
 
+// Start the featured video when it enters view, and pause it when scrolled away.
+const autoplayFrame = document.querySelector("[data-autoplay-on-view]");
+if (autoplayFrame) {
+  let isVisible = false;
+  let isLoaded = false;
+  const sendVideoCommand = (func) => {
+    autoplayFrame.contentWindow.postMessage(JSON.stringify({ event: "command", func, args: [] }), "*");
+  };
+  autoplayFrame.addEventListener("load", () => {
+    if (!autoplayFrame.dataset.started) return;
+    isLoaded = true;
+    sendVideoCommand(isVisible ? "playVideo" : "pauseVideo");
+  });
+  const startOrResumeVideo = () => {
+    if (!autoplayFrame.dataset.started) {
+      autoplayFrame.dataset.started = "true";
+      autoplayFrame.src = autoplayFrame.dataset.videoSrc;
+    } else if (isLoaded) {
+      sendVideoCommand("playVideo");
+    }
+  };
+  if ("IntersectionObserver" in window) {
+    const videoObserver = new IntersectionObserver(([entry]) => {
+      isVisible = entry.isIntersecting;
+      if (isVisible) startOrResumeVideo();
+      else if (isLoaded) sendVideoCommand("pauseVideo");
+    }, { threshold: 0.25 });
+    videoObserver.observe(autoplayFrame.parentElement);
+  } else {
+    isVisible = true;
+    startOrResumeVideo();
+  }
+}
+
 // Footer year
 document.getElementById("year").textContent = new Date().getFullYear();
